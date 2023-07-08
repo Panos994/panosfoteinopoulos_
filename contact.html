@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="UTF-8">
+	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+
+	<title>PortfolioWebsite</title>
+	<link rel="stylesheet" href="style.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body style="background-color: grey;">
+<nav class="navbar">
+			<a href="/" class="nav__link">Home</a> 
+			
+			
+			<a href="/Services.html" class="nav__link">Services</a>
+			
+			<a href="/contact.html" class="nav__link">Contact</a>
+<body>
+
+
+
+
+<center><div class="container">
+	<form onsubmit="sendEmail(); reset(); return false;"> 
+		<h3>GET IN TOUCH >>p.foteinopoulos94@gmail.com</h3>
+			<input type="text" id="name" placeholder="Your Name" required>
+			<input type="email" id="email" placeholder="Email" required>
+			<input type="text" id="phone" placeholder="Phone" required>
+			<textarea id="message" rows="4" placeholder="How can I help you?"></textarea>
+
+			<button type="submit">Send</button>
+	</form>
+
+
+</div></center>
+
+
+	<style>
+
+
+
+
+		.container{
+			max-width:960px ;
+			margin:auto;
+			width:100%;
+			height:100vh;
+			background:#grey;
+			display:flex;
+			align-items:center;
+			justify-conter:center;
+
+		}
+
+		form{
+			background: #fff;
+			display:flex;
+			flex-direction: column;
+			padding: 2vw 4vw;
+			width:90%;
+			max-width: 600px;
+			border-radius: 10px;
+
+		}
+
+
+		form h3{
+			color:#555;
+			font-weight:800;
+			margin-bottom:20px;
+		}
+
+		form input, form textarea{
+			border:0;
+			margin:10px 0;
+			padding:20px;
+			outline:none;
+			background:#f5f5f5;
+			font-size:16px;
+
+		}
+
+		form button{
+			padding:15px;
+			background: #ff5361;
+			color:#fff;
+			font-size:18px;
+			border:0;
+			outline:none;
+			cursor:pointer;
+			width:150px;
+			margin:20px auto 0;
+			border-radius: 30px;
+
+
+		}
+
+	</style>
+<script src="https://smtpjs.com/v3/smtp.js">
+
+</script>
+
+<script>
+	
+	function sendEmail(){
+		Email.send({
+		    Host : "smtp.elasticemail.com",
+		    Username : "p.foteinopoulos94@gmail.com",
+		    Password : "313024!@",
+		    To : 'p.foteinopoulos94@gmail.com',
+		    From : document.getElementById("email").value,
+		    Subject : "New Contact Form Enquiry",
+		    Body : "And this is the body"
+		}).then(
+ 			 message => alert(message)
+		);
+	}
+
+
+
+</script>
+<footer>
+			<center style='text-align:right;'><b>Copyright &copy; 2023, Panos Foteinopoulos</b></center>
+			</footer>
+</body>
+</html>
